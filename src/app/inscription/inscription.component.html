@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unica - University Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Unica University Template">
+    <meta name="keywords" content="event, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->   
+
+   
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+   
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="path/to/carousel/lib"></script>
+    <!-- Stylesheets -->
+    
+    <link rel="stylesheet" href="../../assets/CSS/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/themify-icons.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/magnific-popup.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/animate.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/owl.carousel.css"/>
+    <link rel="stylesheet" href="../../assets/CSS/style.css"/>
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+  
+<script>
+// without this script, the slider doesn't start on it's own:
+!function ($) {
+$(function(){
+  $('#homepage_slider').carousel()
+})
+}(window.jQuery)
+
+
+// if user chooses to not autoplay the video, the button should be uncommented in html and this script will make the button work:
+var vid = document.getElementById("bgvid");
+var playButton = document.querySelector("#slider-play-button button");
+
+playButton.addEventListener("click", function() {
+if (vid.paused) {
+vid.play();
+playButton.classList.remove("play-video-button");
+playButton.classList.add("pause-video-button");
+} else {
+vid.pause();
+playButton.classList.add("play-video-button");
+playButton.classList.remove("pause-video-button");
+}
+});     
+      </script>
+
+       
+    <!-- Page Preloder -->
+  
+
+    <!-- header section -->
+    <header style="width: 100%;height: 15%;top: 0;left: 0;z-index: 999999;background: #fff;" class="header-section">
+        <div class="container">
+            <!-- logo -->
+            
+            
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+          
+        </div>
+    </header>
+    <header class="header-section">
+        <div class="container">
+          <!-- logo -->
+          <a href="index.html" class="site-logo"><img src="img/logo.png" alt=""></a>
+          <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+          </div>
+         
+        </div>
+      </header>
+    <!-- header section end-->
+
+
+    <!-- Header section  -->
+   
+    <!-- Header section end -->
+
+    <!-- Hero section -->
+
+    <div id="banner">
+
+     
+        <!-- Slider begins here -->
+        <div id="homepage_slider" class="carousel slide">
+          <ol class="carousel-indicators">
+
+          </ol>
+                
+          <!-- Carousel items -->
+        <div class="carousel-inner">
+            <!-- slide #1 -->
+            <div data-slide="0" class="item active">
+              <div class="slider-hide-on-mobile">
+                
+                   
+        <img  src="../../assets/hero-slider/bricol.jpg" > 
+                
+                </div>
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+              <img style="width: 500px; height: 580px; padding-bottom: 270px; padding-left: 80px"  src="../../assets/hero-slider/loooo.jpg" > 
+            
+
+            </div>
+          
+                        
+            <!-- slide #2 (image) -->
+           
+            <!-- slide #3 (image) -->
+           
+         
+           <!-- end of '#homepage_slider' -->
+          <!-- Slider ends here -->
+         
+        
+        </div>  <!-- end of "#banner" -->
+        <nav class="nav-section">
+          <div class="container">
+             
+              <ul  class="main-menu">
+                  <li><a href="index.html" style="color: blue">Poster un besoin</a></li>
+                  <li><a href="about.html" style="color: blue">Devenir Employeur</a></li>
+                  <li><a href="#"style="color:blue">Connexion</a></li>
+                  <li><a href="/inscription" style="color: blue">inscription</a></li>
+                 
+              </ul>
+          </div>
+      </nav>
+
+<div class="container">
+  
+    <div class="row">
+        <div class="aa">
+
+
+
+     
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        
+          <h5 *ngIf="success? redirect():false" >
+            <p>Your inscription is done!</p>
+             
+          </h5>
+          
+          <div class="form-group">
+            <label class="text-danger" style="font-weight: bold "  for="exampleInputUsername1" >Name</label>
+              <input style="width: 500px" type="text" id="exampleUsername1" formControlName="username" class="form-control" placeholder="please enter name">
+              <div *ngIf="submitted && messageForm.controls.username.errors" class="error">
+                <div *ngIf="messageForm.controls.username.errors.required">Your name is required</div>
+              </div>
+            </div>
+          
+      
+         
+      
+            <div class="form-group">
+              <label class="text-danger" style="font-weight: bold "  for="exampleInputPass1" >Password</label>
+                <input style="width: 500px" type="text" id="exampleInputPassword1" formControlName="password" class="form-control" placeholder="please enter password">
+                <div *ngIf="submitted && messageForm.controls.password.errors" class="error">
+                  <div *ngIf="messageForm.controls.password.errors.required">Your email is required</div>
+                </div>
+              </div>
+          
+              <div class="form-group">
+                <label class="text-danger" style="font-weight: bold "  for="exampleInputAdresse1" >Adress</label>
+                  <input style="width: 500px" type="text" id="exampleInputAdresse1" formControlName="adresse" class="form-control" placeholder="please enter birthday ">
+                  <div *ngIf="submitted && messageForm.controls.adresse.errors" class="error">
+                    <div *ngIf="messageForm.controls.adresse.errors.required">Your Adress is required</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="text-danger" style="font-weight: bold "  for="exampleInputTel1" >Phone number</label>
+                    <input style="width: 500px" type="text" id="exampleInputTel1" formControlName="tel" class="form-control" placeholder="please enter email">
+                    <div *ngIf="submitted && messageForm.controls.tel.errors" class="error">
+                      <div *ngIf="messageForm.controls.tel.errors.required">Your Phone number is required</div>
+                    </div>
+                  </div>
+
+                <form>
+                  
+                  <div>
+                    <input type="radio" id="contactChoice1"
+                     name="contact" value="email">
+                    <label for="contactChoice1">Client</label>
+                
+                    <input type="radio" id="contactChoice2"
+                     name="contact" value="telephone">
+                    <label for="contactChoice2">Ouvrier</label>
+                
+                    
+                  </div>
+                
+                </form>
+           
+        
+        
+                <div class="row">
+                    <div class="col text-center">
+                  <button type="submit" class="btn btn-danger"  >Sign In </button>
+              </div> </div>
+        
+        </form>
+        
+        
+      
+      
+      </div>
+      
+    </div></div></div>
+      

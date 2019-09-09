@@ -1,0 +1,777 @@
+
+
+    .error {
+        margin-top: -20px;
+        background: yellow;
+        padding: .5em;
+        display: inline-block;
+        font-size: .9em;
+        margin-bottom: 20px;
+    }
+
+
+.cta {
+    background: #7700FF;
+    border: none;
+    color: white;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 1em;
+    cursor: pointer;
+    font-family: 'Montserrat';
+}
+
+.aa{
+
+    margin-top:250px;
+    margin-left: 350px;
+   
+    }
+
+
+.results {
+    margin-top: 50px;
+
+    
+        display: block;
+    
+    
+        margin-bottom: 20px;
+        display: block;
+    
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Rubik', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #111111;
+	margin: 0;
+	font-weight: 500;
+	font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+p {
+	font-size: 14px;
+	color: #636363;
+	line-height: 1.6;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+/*---------------------
+	Helper CSS
+-----------------------*/
+
+.spad {
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+
+.section-title {
+	margin-bottom: 70px;
+}
+
+.section-title h3 {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+.section-title p {
+	margin-bottom: 0;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 0;
+}
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: #fff;
+}
+
+/*---------------------
+	Commom elements
+-----------------------*/
+
+/* Buttons */
+
+.site-btn {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	background: #008080;
+	color: #fff;
+	padding: 18px 30px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	border-radius: 50px;
+	min-width: 170px;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+}
+
+/* Image Popup */
+
+.img-popup-warp .mfp-content,
+.img-popup-warp.mfp-ready.mfp-removing .mfp-content {
+	opacity: 0;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.img-popup-warp.mfp-ready .mfp-content {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+/* Preloder */
+
+.preloder {
+	position: fixed;
+	width: 100%;
+	height: 10%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #fff;
+}
+
+
+
+.preloder .loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+/*---------------------
+	Header section
+-----------------------*/
+
+.header-section {
+	padding: 20px 0;
+	overflow: hidden;
+	
+	
+}
+
+.site-logo {
+	display: inline-block;
+	margin-right: 50px;
+	padding-top: -3px;
+}
+
+.header-info {
+	display: inline-block;
+	float: right;
+}
+
+.header-info .hf-item {
+	display: inline-block;
+	margin-left: 35px;
+}
+
+.header-info .hf-item i {
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	color: #f6783a;
+	font-size: 17px;
+	padding-top: 13px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.header-info .hf-item i:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	border: 1px solid #d2d2db;
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	border-radius: 2px;
+}
+
+.header-info .hf-item p {
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	margin-bottom: 0;
+}
+
+.header-info .hf-item p span {
+	display: block;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #020031;
+	font-weight: 500;
+}
+
+.nav-switch {
+	display: none;
+
+}
+
+
+
+.nav-section .nav-right {
+	float: right;
+	padding-top: 80px;
+}
+
+.nav-section .nav-right a {
+	color: #fff;
+	margin-left: 30px;
+	font-size: 15px;
+}
+
+.main-menu {
+	list-style: none;
+}
+
+.main-menu li {
+	display: inline;
+}
+
+.main-menu li a {
+	display: inline-block;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: 500;
+	padding: 70px 30px 20px;
+	margin-right: -5px;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+
+
+/*---------------------
+	Hero Section
+-----------------------*/
+
+.hs-item {
+	min-height: 760px;
+	position: relative;
+	display: table;
+	width: 100%;
+}
+
+.hs-item .hs-text {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	z-index: 2;
+}
+
+.hs-item .hs-subtitle {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #f6783a;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+	position: relative;
+	opacity: 0;
+	top: 50px;
+}
+
+.hs-item .hs-title {
+	color: #fff;
+	font-size: 48px;
+	margin-bottom: 25px;
+	position: relative;
+	left: 150px;
+	opacity: 0;
+	text-transform: uppercase;
+}
+
+.hs-item .hs-des {
+	color: #fff;
+	font-size: 16px;
+	line-height: 2;
+	position: relative;
+	left: 150px;
+	opacity: 0;
+}
+
+.hs-item .site-btn {
+	margin-top: 30px;
+	opacity: 0;
+	top: 50px;
+}
+
+.owl-item.active .hs-item .hs-title,
+.owl-item.active .hs-item .hs-des,
+.owl-item.active .hs-item .hs-subtitle,
+.owl-item.active .hs-item .site-btn {
+	left: 0;
+	top: 0;
+	opacity: 1;
+}
+
+.owl-item.active .hs-item .hs-subtitle {
+	-webkit-transition: all 0.5s ease 0.4s;
+	-o-transition: all 0.5s ease 0.4s;
+	transition: all 0.5s ease 0.4s;
+}
+
+.owl-item.active .hs-item .hs-title {
+	-webkit-transition: all 0.5s ease 0.6s;
+	-o-transition: all 0.5s ease 0.6s;
+	transition: all 0.5s ease 0.6s;
+}
+
+.owl-item.active .hs-item .hs-des {
+	-webkit-transition: all 0.5s ease 0.8s;
+	-o-transition: all 0.5s ease 0.8s;
+	transition: all 0.5s ease 0.8s;
+}
+
+.owl-item.active .hs-item .site-btn {
+	-webkit-transition: all 0.5s ease 1s;
+	-o-transition: all 0.5s ease 1s;
+	transition: all 0.5s ease 1s;
+}
+
+.hero-slider .owl-dots {
+	position: absolute;
+	width: 100%;
+	bottom: 30px;
+	left: 0;
+	z-index: 1;
+	text-align: center;
+}
+
+.hero-slider .owl-dots .owl-dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #fff;
+	margin: 0 5px;
+}
+
+.hero-slider .owl-dots .owl-dot.active {
+	background: #f6783a;
+}
+
+/*---------------------
+	Counter Section
+-----------------------*/
+
+.counter-section {
+	background: #020031;
+	padding: 40px 0;
+}
+
+.counter-section .big-icon {
+	display: block;
+	float: left;
+	width: 71px;
+	height: 71px;
+	border-radius: 70px;
+	background: #fff;
+	text-align: center;
+	padding-top: 20px;
+	margin-right: 15px;
+}
+
+.counter-section .big-icon i {
+	font-size: 30px;
+	color: #f6783a;
+}
+
+.counter-section .counter {
+	padding-left: 40px;
+}
+
+.counter-section .counter .counter-item {
+	min-width: 100px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #fff;
+	border-right: 1px solid #35335a;
+	text-align: center;
+	display: inline-block;
+}
+
+.counter-section .counter .counter-item:last-child {
+	border-right: none;
+}
+
+.counter-section .counter .counter-item h4 {
+	font-size: 36px;
+	color: #fff;
+	margin-bottom: 4px;
+}
+
+.counter-content {
+	padding-left: 90px;
+}
+
+.counter-content h2 {
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.counter-content p {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.counter-content p i {
+	color: #f6783a;
+	margin-right: 10px;
+}
+
+#homepage_slider video { 
+    min-height: 100% !important;
+    min-width: 100% !important;
+	height: auto !important;
+    width: auto !important;
+	overflow: hidden;
+}
+
+#homepage_slider img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+.carousel-inner>.item>img {
+  display: block;
+  line-height: 1;
+}
+
+/* button to display if user choses to not autoplay the video: */
+#slider-play-button button { 
+	display: inline-block;
+	border: 0.06666em solid #fff;
+	font-size: 2rem;
+	background: rgba(255,255,255,0.23);
+	color: #fff;
+	cursor: pointer;
+	transition: .3s background;
+	
+	line-height: 1.3em;
+	height: 1.5em;
+	width: 2.5em;
+	border-radius: 0.3em;
+	position: absolute;
+	opacity: .7;
+	right: 1em;
+	top: 20%;
+}
+.play-video-button:before {
+	font-family: FontAwesome;
+	content: "\f04b";
+}
+.pause-video-button:before {
+	font-family: FontAwesome;
+	content: "\f04c";
+}  
+.services {
+	margin-bottom: -50px;
+}
+
+.service-item {
+	margin-bottom: 50px;
+}
+
+.service-item .service-icon {
+	width: 45px;
+	float: left;
+}
+
+.service-item .service-icon img {
+	max-width: 100%;
+}
+
+.service-item .service-content {
+	padding-left: 75px;
+}
+
+.service-item .service-content h4 {
+	margin-bottom: 15px;
+	font-weight: 400;
+}
+
+/*---------------------
+	Enroll Section
+-----------------------*/
+.cc{
+	height: 50%
+}
+
+.enroll-section {
+	position: relative;
+}
+
+.enroll-section:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #000;
+	opacity: 0.8;
+}
+
+.enroll-section .container {
+	position: relative;
+	z-index: 1;
+}
+
+.enroll-section .section-title {
+	margin-bottom: 100px;
+}
+
+.enroll-list-item {
+	padding-left: 1px;
+	position: relative;
+	padding-bottom: 1000px;
+	margin-bottom: 1px;
+	size: 100px
+}
+
+.enroll-list-item span {
+	position: absolute;
+	width: 10px;
+	height: 1px;
+	left: 0;
+	top: 0;
+	text-align: center;
+	border-radius: 10px;
+	background: #f6783a;
+	font-size: 1px;
+	font-weight: 50;
+	padding-top: 10px;
+}
+
+.enroll-list-item h5 {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.enroll-list-item:after {
+	position: absolute;
+	content: '';
+	height: calc(100% - 45px);
+	left: 20px;
+	top: 48px;
+	border-left: 1px dashed #6c6e70;
+}
+
+.enroll-list-item:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.enroll-list-item:last-child:after {
+	display: none;
+}
+
+/*---------------------
+	Courses Section
+-----------------------*/
+
+.courses-section .container {
+	margin-bottom: -50px;
+}
+
+.course-item {
+	margin-bottom: 50px;
+}
+
+.course-item .course-thumb {
+	margin-bottom: 45px;
+	position: relative;
+}
+
+.course-item .course-thumb img {
+	min-width: 100%;
+}
+
+.course-item .course-thumb .course-cat {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	bottom: -19px;
+}
+
+.course-item .course-thumb .course-cat span {
+	min-width: 150px;
+	bottom: 0;
+	background: #f6783a;
+	padding: 10px 15px;
+	text-align: center;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	display: inline-block;
+	border-radius: 50px;
+	letter-spacing: 2px;
+}
+
+.course-item .course-info {
+	text-align: center;
+	margin: 0 -15px;
+}
+
+.course-item .course-info .date {
+	color: #f6783a;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.course-item .course-info h4 {
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+.course-item .course-info .cource-price {
+	padding-top: 15px;
+	color: #f6783a;
+}
+
+.course-item .course-info .cource-price span {
+	font-size: 14px;
+	font-weight: 500;
+	color: #b7b7b7;
+}
+
+.enroll-section {
+	position: relative;
+}
+
+
+.enroll-section .container {
+	position: relative;
+	z-index: 1;
+}
+
+.enroll-section .section-title {
+	margin-bottom: 40px;
+}
+
+
+
+.enroll-list-item h5 {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.enroll-list-item:after {
+	position: absolute;
+	content: '';
+	height: calc(100% - 45px);
+	left: 20px;
+	top: 48px;
+	border-left: 1px dashed #6c6e70;
+}
+
+.enroll-list-item:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.enroll-list-item:last-child:after {
+	display: none;
+}
