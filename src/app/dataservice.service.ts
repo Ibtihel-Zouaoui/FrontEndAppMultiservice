@@ -6,7 +6,8 @@ const headers={
     'content-Type':'application/json'
   })
 }
-var adduser: string='http://localhost:9000/test/add';
+var addclient: string='http://localhost:9000/user/add';
+var addouvrier: string='http://localhost:9000/user/addouv';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,14 @@ var adduser: string='http://localhost:9000/test/add';
 export class DataserviceService {
   constructor(private http: HttpClient) { }
 
-  adduser(user)
+  addClient(user)
      {
      
-      return this.http.post(adduser,user)
+      return this.http.post(addclient,user)
+     }
+     addOuvrier(user)
+     {
+     
+      return this.http.post(addouvrier,user)
      }
 }

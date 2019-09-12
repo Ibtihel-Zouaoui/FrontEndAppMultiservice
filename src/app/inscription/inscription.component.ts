@@ -9,11 +9,13 @@ import {DataserviceService} from '../dataservice.service';
 })
 export class InscriptionComponent implements OnInit {
 
-  
 
   messageForm: FormGroup;
   submitted = false;
   success = false;
+  title = 'materialApp'; 
+  favoriteSeason: string;
+  seasons: string[] = ['client', 'ouvrier'];
   
 
   constructor(private formBuilder: FormBuilder,
@@ -41,27 +43,53 @@ export class InscriptionComponent implements OnInit {
     if (this.messageForm.invalid) {
       return;
     }
-    
+    const obj = this.messageForm.value;
+    obj['role'] = this.favoriteSeason;
     this.success = true;
-    this.service.adduser(this.messageForm.value).subscribe(
-      data=>{
-       if(data) {
+    if(this.favoriteSeason=='client') {
+      this.service.addClient(obj).subscribe(
+        data=>{
+         if(data) {
+          
+         }
         
-       }
+        
+        },
+        err => {
+          console.log("error sending data")
+        },
+        ()=>{
+          console.log("data sent")
+        }
+  
+  
       
-      
-      },
-      err => {
-        console.log("error sending data")
-      },
-      ()=>{
-        console.log("data sent")
+        )
       }
-
-
+      else {
+        this.service.addOuvrier(obj).subscribe(
+          data=>{
+           if(data) {
+            
+           }
+          
+          
+          },
+          err => {
+            console.log("error sending data")
+          },
+          ()=>{
+            console.log("data sent")
+          }
     
-      )
+    
+        
+          )
+
+      }
     }
+   
+    
 
   ngOnInit() {
   }

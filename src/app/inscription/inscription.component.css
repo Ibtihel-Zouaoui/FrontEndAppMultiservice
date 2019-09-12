@@ -488,6 +488,17 @@ ol {
 	border-right: none;
 }
 
+.tp-radio-group {
+	display: inline-flex;
+	flex-direction: column;
+ }
+ .tp-radio-button {
+	margin: 5px;
+ }
+ .tp-selected-value {
+	margin: 15px 0;
+ }
+
 .counter-section .counter .counter-item h4 {
 	font-size: 36px;
 	color: #fff;

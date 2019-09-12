@@ -153,13 +153,12 @@ playButton.classList.remove("pause-video-button");
 
 
      
-        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="messageForm">
         
           <h5 *ngIf="success? redirect():false" >
             <p>Your inscription is done!</p>
              
           </h5>
-          
           <div class="form-group">
             <label class="text-danger" style="font-weight: bold "  for="exampleInputUsername1" >Name</label>
               <input style="width: 500px" type="text" id="exampleUsername1" formControlName="username" class="form-control" placeholder="please enter name">
@@ -167,10 +166,6 @@ playButton.classList.remove("pause-video-button");
                 <div *ngIf="messageForm.controls.username.errors.required">Your name is required</div>
               </div>
             </div>
-          
-      
-         
-      
             <div class="form-group">
               <label class="text-danger" style="font-weight: bold "  for="exampleInputPass1" >Password</label>
                 <input style="width: 500px" type="text" id="exampleInputPassword1" formControlName="password" class="form-control" placeholder="please enter password">
@@ -193,34 +188,19 @@ playButton.classList.remove("pause-video-button");
                       <div *ngIf="messageForm.controls.tel.errors.required">Your Phone number is required</div>
                     </div>
                   </div>
-
-                <form>
-                  
-                  <div>
-                    <input type="radio" id="contactChoice1"
-                     name="contact" value="email">
-                    <label for="contactChoice1">Client</label>
-                
-                    <input type="radio" id="contactChoice2"
-                     name="contact" value="telephone">
-                    <label for="contactChoice2">Ouvrier</label>
-                
-                    
-                  </div>
-                
-                </form>
-           
-        
-        
-                <div class="row">
-                    <div class="col text-center">
-                  <button type="submit" class="btn btn-danger"  >Sign In </button>
-              </div> </div>
-        
         </form>
-        
-        
+
       
+        <mat-radio-group class = "tp-radio-group" [(ngModel)] = "favoriteSeason">
+          <mat-radio-button class = "tp-radio-button" *ngFor = "let season of seasons" [value] = "season">
+                      {{season}}
+          </mat-radio-button>
+      </mat-radio-group>
+    
+      <div class="row">
+        <div class="col text-center">
+      <button type="submit" (click)="onSubmit()" class="btn btn-danger"  >Sign In </button>
+  </div> 
       
       </div>
       
